@@ -1,0 +1,187 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.email="rpauipath.mail@gmail.com" this:Main.password="ikyytxiylpignake" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="email" Type="InArgument(x:String)" />
+    <x:Property Name="password" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>726.666666666667,3192</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="736.666666666667,3127.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtASE1" />
+      <Variable x:TypeArguments="x:String" Name="ProcessedPath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="694.666666666667,361.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\KHUSHI_CHIRCHI\Desktop\certificate generation\ASE1.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,252.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtASE1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelReadRange>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[ProcessedPath]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">C:\Users\KHUSHI_CHIRCHI\Desktop\certificate generation\cert\</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtASE1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="694.666666666667,2634" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="660.666666666667,2455.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;C:\Users\KHUSHI_CHIRCHI\Desktop\certificate generation\cert\&quot;+row(&quot;studentname&quot;).ToString+&quot;.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="618.666666666667,162" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="C:\Users\KHUSHI_CHIRCHI\Desktop\certificate generation\cert1.docx" />
+            <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[&quot;C:\Users\KHUSHI_CHIRCHI\Desktop\certificate generation\cert\&quot;+row(&quot;studentname&quot;).ToString+&quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="618.666666666667,2161.33333333333" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+              <p:WordApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WordDocument">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2052.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[row(&quot;studentname&quot;).ToString]" ReplaceAll="True" Search="studentname" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[row(&quot;collegename&quot;).ToString]" ReplaceAll="True" Search="collegename" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[row(&quot;present&quot;).ToString]" ReplaceAll="True" Search="present" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[row(&quot;Reference&quot;).ToString]" ReplaceAll="True" Search="Reference" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[row(&quot;projectname&quot;).ToString]" ReplaceAll="True" Search="projectname" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[row(&quot;Designation&quot;).ToString]" ReplaceAll="True" Search="Designation" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[row(&quot;startdate&quot;).ToString]" ReplaceAll="True" Search="startdate" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,167.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_8" Replace="[row(&quot;enddate&quot;).ToString]" ReplaceAll="True" Search="enddate" />
+                    <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[&quot;C:\Users\KHUSHI_CHIRCHI\Desktop\certificate generation\cert\&quot;+row(&quot;studentname&quot;).ToString+&quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="434,112.666666666667" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Congratulations! You've completed the internship at DigiTran Solutions. Here's your Certificate" DisplayName="Send SMTP Mail Message" Email="[email]" EnableSSL="True" From="[Email]" sap:VirtualizedContainerService.HintSize="434,149.333333333333" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="DigiTran Solutions" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="DigiTran Solutions - Internship Certificate" To="[row(&quot;email&quot;).ToString]">
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProcessedPath+row(&quot;studentname&quot;).ToString+&quot;.pdf&quot;" />
+                          </InArgument>
+                        </scg:List>
+                      </ui:SendMail.Files>
+                    </ui:SendMail>
+                  </Sequence>
+                </ActivityAction>
+              </p:WordApplicationScope.Body>
+            </p:WordApplicationScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
